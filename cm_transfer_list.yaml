@@ -1,0 +1,1122 @@
+stage1:
+  step1a:
+    # - analyzeAmpInterfaceOffsetMetadata_config  # (config/log/metadata)
+    # - analyzeAmpInterfaceOffsetMetadata_log  # (config/log/metadata)
+    # - analyzeAmpInterfaceOffsetMetadata_metadata  # (config/log/metadata)
+    # - analyzeAmpOffsetMetadata_config  # (config/log/metadata)
+    # - analyzeAmpOffsetMetadata_log  # (config/log/metadata)
+    # - analyzeAmpOffsetMetadata_metadata  # (config/log/metadata)
+    # - analyzeCalibrateImageMetadata_config  # (config/log/metadata)
+    # - analyzeCalibrateImageMetadata_log  # (config/log/metadata)
+    # - analyzeCalibrateImageMetadata_metadata  # (config/log/metadata)
+    # - analyzeInitialSummaryStats_config  # (config/log/metadata)
+    # - analyzeInitialSummaryStats_log  # (config/log/metadata)
+    # - analyzeInitialSummaryStats_metadata  # (config/log/metadata)
+    - background_to_photometric_ratio
+    # - calibrateImage_config  # (config/log/metadata)
+    # - calibrateImage_log  # (config/log/metadata)
+    # - calibrateImage_metadata  # (config/log/metadata)
+    # - initial_astrometry_match_detector  # (intermediate catalog/metadata)
+    # - initial_photoCalib_detector  # (intermediate catalog/metadata)
+    # - initial_photometry_match_detector  # (intermediate catalog/metadata)
+    - isrStatistics
+    # - isr_config  # (config/log/metadata)
+    # - isr_log  # (config/log/metadata)
+    # - isr_metadata  # (config/log/metadata)
+    - isr_metrics
+    # - packages  # (environment package info)
+    # - postIsrBin1  # (default non-transfer)
+    # - postIsrBin2  # (default non-transfer)
+    # - post_isr_image  # (intermediate image/warp/catalog)
+    # - preInterpISRCCD  # (default non-transfer)
+    # - preliminary_visit_image  # (intermediate image/warp/catalog)
+    # - preliminary_visit_image_background  # (intermediate image/warp/catalog)
+    # - preliminary_visit_mask  # (intermediate image/warp/catalog)
+    # - single_visit_psf_star  # (default non-transfer)
+    # - single_visit_psf_star_footprints  # (intermediate catalog/metadata)
+    # - single_visit_star_detector  # (intermediate catalog/metadata)
+    # - single_visit_star_footprints  # (intermediate catalog/metadata)
+    # - single_visit_star_schema  # (intermediate catalog/metadata)
+    # - single_visit_star_unstandardized  # (intermediate catalog/metadata)
+    # - standardizeSingleVisitStar_config  # (config/log/metadata)
+    # - standardizeSingleVisitStar_log  # (config/log/metadata)
+    # - standardizeSingleVisitStar_metadata  # (config/log/metadata)
+  step1b:
+    # - analyzeSingleVisitStarAstrometricRefMatch_config  # (config/log/metadata)
+    # - analyzeSingleVisitStarAstrometricRefMatch_log  # (config/log/metadata)
+    # - analyzeSingleVisitStarAstrometricRefMatch_metadata  # (config/log/metadata)
+    # - analyzeSingleVisitStarPhotometricRefMatch_config  # (config/log/metadata)
+    # - analyzeSingleVisitStarPhotometricRefMatch_log  # (config/log/metadata)
+    # - analyzeSingleVisitStarPhotometricRefMatch_metadata  # (config/log/metadata)
+    # - analyzeSingleVisitStar_config  # (config/log/metadata)
+    # - analyzeSingleVisitStar_log  # (config/log/metadata)
+    # - analyzeSingleVisitStar_metadata  # (config/log/metadata)
+    # - consolidateSingleVisitStar_config  # (config/log/metadata)
+    # - consolidateSingleVisitStar_log  # (config/log/metadata)
+    # - consolidateSingleVisitStar_metadata  # (config/log/metadata)
+    - consolidateSingleVisitStar_metrics
+    # - consolidateVisitSummary_config  # (config/log/metadata)
+    # - consolidateVisitSummary_log  # (config/log/metadata)
+    # - consolidateVisitSummary_metadata  # (config/log/metadata)
+    - isolated_star
+    - isolated_star_association
+    - isolated_star_predicted_positions
+    - isolated_star_stellar_motions
+    # - makeAnalysisSingleVisitStarAstrometricRefMatch_config  # (config/log/metadata)
+    # - makeAnalysisSingleVisitStarAstrometricRefMatch_log  # (config/log/metadata)
+    # - makeAnalysisSingleVisitStarAstrometricRefMatch_metadata  # (config/log/metadata)
+    # - makeAnalysisSingleVisitStarPhotometricRefMatch_config  # (config/log/metadata)
+    # - makeAnalysisSingleVisitStarPhotometricRefMatch_log  # (config/log/metadata)
+    # - makeAnalysisSingleVisitStarPhotometricRefMatch_metadata  # (config/log/metadata)
+    - preliminary_visit_detector_table
+    # - preliminary_visit_image  # (intermediate image/warp/catalog)
+    # - preliminary_visit_image_background  # (intermediate image/warp/catalog)
+    # - preliminary_visit_mask  # (intermediate image/warp/catalog)
+    - preliminary_visit_summary
+    # - preliminary_visit_summary_schema  # (intermediate catalog/metadata)
+    - preliminary_visit_table
+    # - single_visit_psf_star  # (default non-transfer)
+    # - single_visit_psf_star_footprints  # (intermediate catalog/metadata)
+    - single_visit_star
+    - single_visit_star_association_stellarAstrometricRepeatability1_HistPlot
+    - single_visit_star_association_stellarAstrometricRepeatability2_HistPlot
+    - single_visit_star_association_stellarAstrometricRepeatability3_HistPlot
+    - single_visit_star_association_stellarAstrometricResidualStdDevDec_FocalPlanePlot
+    - single_visit_star_association_stellarAstrometricResidualStdDevRA_FocalPlanePlot
+    - single_visit_star_association_stellarAstrometricResidualsDec_FocalPlanePlot
+    - single_visit_star_association_stellarAstrometricResidualsRA_FocalPlanePlot
+    - single_visit_star_association_stellarAstrometricSelfRepeatabilityDec_HistPlot
+    - single_visit_star_association_stellarAstrometricSelfRepeatabilityRA_HistPlot
+    - single_visit_star_association_stellarPhotometricRepeatabilityCalib_HistPlot
+    - single_visit_star_association_stellarPhotometricRepeatability_HistPlot
+    - single_visit_star_association_stellarPhotometricResidualsCalib_FocalPlanePlot
+    - single_visit_star_association_stellarPhotometricResiduals_FocalPlanePlot
+    # - single_visit_star_detector  # (intermediate catalog/metadata)
+    # - single_visit_star_footprints  # (intermediate catalog/metadata)
+    # - single_visit_star_schema  # (intermediate catalog/metadata)
+    # - single_visit_star_unstandardized  # (intermediate catalog/metadata)
+    # - target_ref_match_astrom  # (default non-transfer)
+    # - target_ref_match_photom  # (default non-transfer)
+    # - visit_geometry  # (default non-transfer)
+    - visit_summary
+    # - visit_summary_schema  # (intermediate catalog/metadata)
+  step1c:
+    # - analyzeSingleVisitStarAssociation_config  # (config/log/metadata)
+    # - analyzeSingleVisitStarAssociation_log  # (config/log/metadata)
+    # - analyzeSingleVisitStarAssociation_metadata  # (config/log/metadata)
+    # - associateIsolatedStar_config  # (config/log/metadata)
+    # - associateIsolatedStar_log  # (config/log/metadata)
+    # - associateIsolatedStar_metadata  # (config/log/metadata)
+    - associateIsolatedStar_metrics
+    - isolated_star
+    - isolated_star_association
+    - single_visit_star_association_metrics
+  step1d:
+    # - makeAnalysisSingleVisitStarAssociationMetricTable_config  # (config/log/metadata)
+    # - makeAnalysisSingleVisitStarAssociationMetricTable_log  # (config/log/metadata)
+    # - makeAnalysisSingleVisitStarAssociationMetricTable_metadata  # (config/log/metadata)
+    # - makeAnalysisSingleVisitStarAssociationWholeSkyPlot_config  # (config/log/metadata)
+    # - makeAnalysisSingleVisitStarAssociationWholeSkyPlot_log  # (config/log/metadata)
+    # - makeAnalysisSingleVisitStarAssociationWholeSkyPlot_metadata  # (config/log/metadata)
+    # - makeInitialVisitDetectorTable_config  # (config/log/metadata)
+    # - makeInitialVisitDetectorTable_log  # (config/log/metadata)
+    # - makeInitialVisitDetectorTable_metadata  # (config/log/metadata)
+    - makeInitialVisitDetectorTable_metrics
+    # - makeInitialVisitTable_config  # (config/log/metadata)
+    # - makeInitialVisitTable_log  # (config/log/metadata)
+    # - makeInitialVisitTable_metadata  # (config/log/metadata)
+    - preliminary_visit_detector_table
+    - preliminary_visit_table
+    - single_visit_star_association_metrics_table
+    - single_visit_star_association_whole_sky_stellarAstrometricRepeatability1_AD1_WholeSkyPlot
+    - single_visit_star_association_whole_sky_stellarAstrometricRepeatability1_AF1_WholeSkyPlot
+    - single_visit_star_association_whole_sky_stellarAstrometricRepeatability1_AM1_WholeSkyPlot
+    - single_visit_star_association_whole_sky_stellarAstrometricRepeatability2_AD2_WholeSkyPlot
+    - single_visit_star_association_whole_sky_stellarAstrometricRepeatability2_AF2_WholeSkyPlot
+    - single_visit_star_association_whole_sky_stellarAstrometricRepeatability2_AM2_WholeSkyPlot
+    - single_visit_star_association_whole_sky_stellarAstrometricRepeatability3_AD3_WholeSkyPlot
+    - single_visit_star_association_whole_sky_stellarAstrometricRepeatability3_AF3_WholeSkyPlot
+    - single_visit_star_association_whole_sky_stellarAstrometricRepeatability3_AM3_WholeSkyPlot
+    - single_visit_star_association_whole_sky_stellarAstrometricSelfRepeatabilityDec_dmL2AstroErr_Dec_WholeSkyPlot
+    - single_visit_star_association_whole_sky_stellarAstrometricSelfRepeatabilityRA_dmL2AstroErr_RA_WholeSkyPlot
+    - single_visit_star_association_whole_sky_stellarPhotometricRepeatability_stellarPhotRepeatOutlierFraction_WholeSkyPlot
+    - single_visit_star_association_whole_sky_stellarPhotometricRepeatability_stellarPhotRepeatStdev_WholeSkyPlot
+    - single_visit_star_association_whole_sky_stellarPhotometricResiduals_photResidTractMedian_WholeSkyPlot
+    - single_visit_star_association_whole_sky_stellarPhotometricResiduals_photResidTractSigmaMad_WholeSkyPlot
+    - single_visit_star_association_whole_sky_stellarPhotometricResiduals_photResidTractStdev_WholeSkyPlot
+stage2:
+  step2a:
+    # - fgcmBuildFromIsolatedStar_config  # (config/log/metadata)
+    # - fgcmBuildFromIsolatedStar_log  # (config/log/metadata)
+    # - fgcmBuildFromIsolatedStar_metadata  # (config/log/metadata)
+    # - fgcmFitCycle_config  # (config/log/metadata)
+    # - fgcmFitCycle_log  # (config/log/metadata)
+    # - fgcmFitCycle_metadata  # (config/log/metadata)
+    # - fgcmOutputProducts_config  # (config/log/metadata)
+    # - fgcmOutputProducts_log  # (config/log/metadata)
+    # - fgcmOutputProducts_metadata  # (config/log/metadata)
+    - fgcmPhotoCalibCatalog
+    # - fgcmReferenceCalibrationOffsets  # (default non-transfer)
+    - fgcmVisitCatalog
+    # - fgcm_Cycle0_FitParameters  # (default non-transfer)
+    # - fgcm_Cycle0_FlaggedStars  # (default non-transfer)
+    # - fgcm_Cycle0_OutputConfig  # (default non-transfer)
+    # - fgcm_Cycle1_FitParameters  # (default non-transfer)
+    # - fgcm_Cycle1_FlaggedStars  # (default non-transfer)
+    # - fgcm_Cycle1_OutputConfig  # (default non-transfer)
+    # - fgcm_Cycle2_FitParameters  # (default non-transfer)
+    # - fgcm_Cycle2_FlaggedStars  # (default non-transfer)
+    # - fgcm_Cycle2_OutputConfig  # (default non-transfer)
+    # - fgcm_Cycle3_FitParameters  # (default non-transfer)
+    # - fgcm_Cycle3_FlaggedStars  # (default non-transfer)
+    # - fgcm_Cycle3_OutputConfig  # (default non-transfer)
+    - fgcm_Cycle4_AbsThroughputs_Plot
+    - fgcm_Cycle4_Apercorr_Plot
+    - fgcm_Cycle4_ChisqFit_Plot
+    - fgcm_Cycle4_CompareRedblueExpgray_Plot
+    - fgcm_Cycle4_DensityAllStarMap_Plot
+    - fgcm_Cycle4_DensityGoodStarMap_Plot
+    - fgcm_Cycle4_EpsilonDetectorMatchscale_Plot
+    - fgcm_Cycle4_EpsilonDetector_Plot
+    - fgcm_Cycle4_EpsilonGlobal_Plot
+    - fgcm_Cycle4_EpsilonMap_Plot
+    - fgcm_Cycle4_ExpgrayAirmass_Plot
+    - fgcm_Cycle4_ExpgrayCompareBands_Plot
+    - fgcm_Cycle4_ExpgrayCompareMjdRedblue_Plot
+    - fgcm_Cycle4_ExpgrayReference_Plot
+    - fgcm_Cycle4_ExpgrayUT_Plot
+    - fgcm_Cycle4_Expgray_Plot
+    - fgcm_Cycle4_FilterOffsets_Plot
+    # - fgcm_Cycle4_FitParameters  # (default non-transfer)
+    # - fgcm_Cycle4_FlaggedStars  # (default non-transfer)
+    - fgcm_Cycle4_I1R1_Plot
+    - fgcm_Cycle4_I1_Plot
+    - fgcm_Cycle4_ModelMagerrPostfit_Plot
+    - fgcm_Cycle4_ModelPwvVsRpwv_Plot
+    - fgcm_Cycle4_NightlyAlpha_Plot
+    - fgcm_Cycle4_NightlyO3_Plot
+    - fgcm_Cycle4_NightlyPwv_Plot
+    - fgcm_Cycle4_NightlyTau_Plot
+    # - fgcm_Cycle4_OutputConfig  # (default non-transfer)
+    - fgcm_Cycle4_QESysRefstarsObsFinal_Plot
+    - fgcm_Cycle4_QESysRefstarsStdFinal_Plot
+    - fgcm_Cycle4_QESysWashesFinal_Plot
+    - fgcm_Cycle4_R1_Plot
+    - fgcm_Cycle4_R1mI1Matchscale_Plot
+    - fgcm_Cycle4_R1mI1_Plot
+    - fgcm_Cycle4_R1mI1_vs_mjd_Plot
+    - fgcm_Cycle4_RefResidVsColorAll_Plot
+    - fgcm_Cycle4_RefResidVsColorCut_Plot
+    - fgcm_Cycle4_RpwvVsRpwvInput_Plot
+    - fgcm_Cycle4_RpwvVsRpwvSmooth_Plot
+    - fgcm_Cycle4_SigmaCal_Plot
+    - fgcm_Cycle4_SigmaFgcmAllStars_Plot
+    - fgcm_Cycle4_SigmaFgcmPullsAllStars_Plot
+    - fgcm_Cycle4_SigmaFgcmPullsReservedStarsCrunchedNonPhotom_Plot
+    - fgcm_Cycle4_SigmaFgcmPullsReservedStarsCrunched_Plot
+    - fgcm_Cycle4_SigmaFgcmPullsReservedStars_Plot
+    - fgcm_Cycle4_SigmaFgcmReservedStarsCrunchedNonPhotom_Plot
+    - fgcm_Cycle4_SigmaFgcmReservedStarsCrunched_Plot
+    - fgcm_Cycle4_SigmaFgcmReservedStars_Plot
+    - fgcm_Cycle4_SigmaRef_Plot
+    - fgcm_Cycle4_Superstar_epoch0_Plot
+    - fgcm_Cycle4_Superstar_epoch1_Plot
+    - fgcm_Cycle4_Zeropoints_Plot
+    - fgcm_Cycle5_AbsThroughputs_Plot
+    - fgcm_Cycle5_AtmosphereParameters
+    - fgcm_Cycle5_CompareRedblueExpgray_Plot
+    - fgcm_Cycle5_DensityAllStarMap_Plot
+    - fgcm_Cycle5_DensityGoodStarMap_Plot
+    - fgcm_Cycle5_EpsilonDetectorMatchscale_Plot
+    - fgcm_Cycle5_EpsilonDetector_Plot
+    - fgcm_Cycle5_EpsilonGlobal_Plot
+    - fgcm_Cycle5_EpsilonMap_Plot
+    - fgcm_Cycle5_ExpgrayAirmass_Plot
+    - fgcm_Cycle5_ExpgrayCompareBands_Plot
+    - fgcm_Cycle5_ExpgrayCompareMjdRedblue_Plot
+    - fgcm_Cycle5_ExpgrayReference_Plot
+    - fgcm_Cycle5_ExpgrayUT_Plot
+    - fgcm_Cycle5_Expgray_Plot
+    - fgcm_Cycle5_FilterOffsets_Plot
+    # - fgcm_Cycle5_FitParameters  # (default non-transfer)
+    # - fgcm_Cycle5_FlaggedStars  # (default non-transfer)
+    - fgcm_Cycle5_I1R1_Plot
+    - fgcm_Cycle5_I1_Plot
+    - fgcm_Cycle5_ModelPwvVsRpwv_Plot
+    - fgcm_Cycle5_NightlyAlpha_Plot
+    - fgcm_Cycle5_NightlyO3_Plot
+    - fgcm_Cycle5_NightlyPwv_Plot
+    - fgcm_Cycle5_NightlyTau_Plot
+    # - fgcm_Cycle5_OutputConfig  # (default non-transfer)
+    - fgcm_Cycle5_R1_Plot
+    - fgcm_Cycle5_R1mI1Matchscale_Plot
+    - fgcm_Cycle5_R1mI1_Plot
+    - fgcm_Cycle5_R1mI1_vs_mjd_Plot
+    - fgcm_Cycle5_RefResidVsColorAll_Plot
+    - fgcm_Cycle5_RefResidVsColorCut_Plot
+    - fgcm_Cycle5_RpwvVsRpwvInput_Plot
+    - fgcm_Cycle5_RpwvVsRpwvSmooth_Plot
+    - fgcm_Cycle5_SigmaCal_Plot
+    - fgcm_Cycle5_SigmaFgcmAllStars_Plot
+    - fgcm_Cycle5_SigmaFgcmPullsAllStars_Plot
+    - fgcm_Cycle5_SigmaFgcmPullsReservedStarsCrunchedNonPhotom_Plot
+    - fgcm_Cycle5_SigmaFgcmPullsReservedStarsCrunched_Plot
+    - fgcm_Cycle5_SigmaFgcmPullsReservedStars_Plot
+    - fgcm_Cycle5_SigmaFgcmReservedStarsCrunchedNonPhotom_Plot
+    - fgcm_Cycle5_SigmaFgcmReservedStarsCrunched_Plot
+    - fgcm_Cycle5_SigmaFgcmReservedStars_Plot
+    - fgcm_Cycle5_SigmaRef_Plot
+    - fgcm_Cycle5_StandardStars
+    # - fgcm_Cycle5_Zeropoints  # (default non-transfer)
+    - fgcm_Cycle5_Zeropoints_Plot
+    - fgcm_reference_stars
+    - fgcm_standard_star
+    - fgcm_star_ids
+    - fgcm_star_observations
+    - transmission_atmosphere_fgcm
+  step2b:
+    - gbdesAstrometricFitCamera
+    - gbdesAstrometricFitSkyWcsCatalog
+    - gbdesAstrometricFit_cameraModel
+    # - gbdesAstrometricFit_config  # (config/log/metadata)
+    - gbdesAstrometricFit_dcrCoefficients
+    - gbdesAstrometricFit_fitStars
+    # - gbdesAstrometricFit_log  # (config/log/metadata)
+    # - gbdesAstrometricFit_metadata  # (config/log/metadata)
+    - gbdesAstrometricFit_modelParams
+    - gbdesAstrometricFit_starCatalog
+  step2c:
+    - gbdesHealpix3AstrometricFitCamera
+    - gbdesHealpix3AstrometricFitSkyWcsCatalog
+    - gbdesHealpix3AstrometricFit_cameraModel
+    # - gbdesHealpix3AstrometricFit_config  # (config/log/metadata)
+    - gbdesHealpix3AstrometricFit_dcrCoefficients
+    - gbdesHealpix3AstrometricFit_fitStars
+    # - gbdesHealpix3AstrometricFit_log  # (config/log/metadata)
+    # - gbdesHealpix3AstrometricFit_metadata  # (config/log/metadata)
+    - gbdesHealpix3AstrometricFit_modelParams
+    - gbdesHealpix3AstrometricFit_starCatalog
+  step2d:
+    # - analyzeRecalibratedStarAstrometricRefMatch_config  # (config/log/metadata)
+    # - analyzeRecalibratedStarAstrometricRefMatch_log  # (config/log/metadata)
+    # - analyzeRecalibratedStarAstrometricRefMatch_metadata  # (config/log/metadata)
+    # - analyzeRecalibratedStarPhotometricRefMatch_config  # (config/log/metadata)
+    # - analyzeRecalibratedStarPhotometricRefMatch_log  # (config/log/metadata)
+    # - analyzeRecalibratedStarPhotometricRefMatch_metadata  # (config/log/metadata)
+    # - analyzeRecalibratedStar_config  # (config/log/metadata)
+    # - analyzeRecalibratedStar_log  # (config/log/metadata)
+    # - analyzeRecalibratedStar_metadata  # (config/log/metadata)
+    # - consolidateRecalibratedStar_config  # (config/log/metadata)
+    # - consolidateRecalibratedStar_log  # (config/log/metadata)
+    # - consolidateRecalibratedStar_metadata  # (config/log/metadata)
+    # - consolidateRefitPsfModelDetector_config  # (config/log/metadata)
+    # - consolidateRefitPsfModelDetector_log  # (config/log/metadata)
+    # - consolidateRefitPsfModelDetector_metadata  # (config/log/metadata)
+    # - gaussianProcessesTurbulenceFit_config  # (config/log/metadata)
+    # - gaussianProcessesTurbulenceFit_log  # (config/log/metadata)
+    # - gaussianProcessesTurbulenceFit_metadata  # (config/log/metadata)
+    # - makeAnalysisRecalibratedStarAstrometricRefMatch_config  # (config/log/metadata)
+    # - makeAnalysisRecalibratedStarAstrometricRefMatch_log  # (config/log/metadata)
+    # - makeAnalysisRecalibratedStarAstrometricRefMatch_metadata  # (config/log/metadata)
+    # - makeAnalysisRecalibratedStarPhotometricRefMatch_config  # (config/log/metadata)
+    # - makeAnalysisRecalibratedStarPhotometricRefMatch_log  # (config/log/metadata)
+    # - makeAnalysisRecalibratedStarPhotometricRefMatch_metadata  # (config/log/metadata)
+    # - recalibrateSingleVisitStar_config  # (config/log/metadata)
+    # - recalibrateSingleVisitStar_log  # (config/log/metadata)
+    # - recalibrateSingleVisitStar_metadata  # (config/log/metadata)
+    - recalibrated_star
+    # - recalibrated_star_detector  # (intermediate catalog/metadata)
+    - recalibrated_star_ref_match_astrom
+    - recalibrated_star_ref_match_astrom_metrics
+    # - recalibrated_star_unstandardized  # (intermediate catalog/metadata)
+    # - refitPsfModelDetector_config  # (config/log/metadata)
+    # - refitPsfModelDetector_log  # (config/log/metadata)
+    # - refitPsfModelDetector_metadata  # (config/log/metadata)
+    - refitPsfModelDetector_metrics
+    # - refit_psf_models  # (intermediate catalog/metadata)
+    # - refit_psf_models_detector  # (intermediate catalog/metadata)
+    # - refit_psf_star  # (default non-transfer)
+    # - refit_psf_star_detector  # (intermediate catalog/metadata)
+    # - standardizeRecalibratedStar_config  # (config/log/metadata)
+    # - standardizeRecalibratedStar_log  # (config/log/metadata)
+    # - standardizeRecalibratedStar_metadata  # (config/log/metadata)
+    # - target_ref_match_astrom  # (default non-transfer)
+    # - target_ref_match_photom  # (default non-transfer)
+    - turbulenceCorrectedSkyWcsCatalog
+    # - turbulence_fit_hyperparameters  # (intermediate catalog/metadata)
+    # - updateVisitSummary_config  # (config/log/metadata)
+    # - updateVisitSummary_log  # (config/log/metadata)
+    # - updateVisitSummary_metadata  # (config/log/metadata)
+    # - visit_geometry  # (default non-transfer)
+    - visit_summary
+    # - visit_summary_schema  # (intermediate catalog/metadata)
+  step2e:
+    # - analyzeRecalibratedStarAssociation_config  # (config/log/metadata)
+    # - analyzeRecalibratedStarAssociation_log  # (config/log/metadata)
+    # - analyzeRecalibratedStarAssociation_metadata  # (config/log/metadata)
+    # - fitStellarMotion_config  # (config/log/metadata)
+    # - fitStellarMotion_log  # (config/log/metadata)
+    # - fitStellarMotion_metadata  # (config/log/metadata)
+    - isolated_star_predicted_positions
+    - isolated_star_stellar_motions
+    - recalibrated_star_association_metrics
+    - recalibrated_star_association_stellarAstrometricRepeatability1_HistPlot
+    - recalibrated_star_association_stellarAstrometricRepeatability2_HistPlot
+    - recalibrated_star_association_stellarAstrometricRepeatability3_HistPlot
+    - recalibrated_star_association_stellarAstrometricResidualStdDevDec_FocalPlanePlot
+    - recalibrated_star_association_stellarAstrometricResidualStdDevRA_FocalPlanePlot
+    - recalibrated_star_association_stellarAstrometricResidualsDec_FocalPlanePlot
+    - recalibrated_star_association_stellarAstrometricResidualsRA_FocalPlanePlot
+    - recalibrated_star_association_stellarAstrometricSelfRepeatabilityDec_HistPlot
+    - recalibrated_star_association_stellarAstrometricSelfRepeatabilityRA_HistPlot
+    - recalibrated_star_association_stellarPhotometricRepeatabilityCalib_HistPlot
+    - recalibrated_star_association_stellarPhotometricRepeatability_HistPlot
+    - recalibrated_star_association_stellarPhotometricResidualsCalib_FocalPlanePlot
+    - recalibrated_star_association_stellarPhotometricResiduals_FocalPlanePlot
+  step2f:
+    # - makeAnalysisRecalibratedStarAssociationMetricTable_config  # (config/log/metadata)
+    # - makeAnalysisRecalibratedStarAssociationMetricTable_log  # (config/log/metadata)
+    # - makeAnalysisRecalibratedStarAssociationMetricTable_metadata  # (config/log/metadata)
+    # - makeAnalysisRecalibratedStarAssociationWholeSkyPlot_config  # (config/log/metadata)
+    # - makeAnalysisRecalibratedStarAssociationWholeSkyPlot_log  # (config/log/metadata)
+    # - makeAnalysisRecalibratedStarAssociationWholeSkyPlot_metadata  # (config/log/metadata)
+    # - makeVisitDetectorTable_config  # (config/log/metadata)
+    # - makeVisitDetectorTable_log  # (config/log/metadata)
+    # - makeVisitDetectorTable_metadata  # (config/log/metadata)
+    - makeVisitDetectorTable_metrics
+    # - makeVisitTable_config  # (config/log/metadata)
+    # - makeVisitTable_log  # (config/log/metadata)
+    # - makeVisitTable_metadata  # (config/log/metadata)
+    - recalibrated_star_association_metrics_table
+    - visit_detector_table
+    - visit_table
+stage3:
+  step3a:
+    # - analyzeObjectParentTableCore_config  # (config/log/metadata)
+    # - analyzeObjectParentTableCore_log  # (config/log/metadata)
+    # - analyzeObjectParentTableCore_metadata  # (config/log/metadata)
+    # - analyzeObjectTableCore_config  # (config/log/metadata)
+    # - analyzeObjectTableCore_log  # (config/log/metadata)
+    # - analyzeObjectTableCore_metadata  # (config/log/metadata)
+    # - assembleCellCoadd_config  # (config/log/metadata)
+    # - assembleCellCoadd_log  # (config/log/metadata)
+    # - assembleCellCoadd_metadata  # (config/log/metadata)
+    # - assembleDeepCoadd_config  # (config/log/metadata)
+    # - assembleDeepCoadd_log  # (config/log/metadata)
+    # - assembleDeepCoadd_metadata  # (config/log/metadata)
+    # - assembleTemplateCoadd_config  # (config/log/metadata)
+    # - assembleTemplateCoadd_log  # (config/log/metadata)
+    # - assembleTemplateCoadd_metadata  # (config/log/metadata)
+    # - catalogMatchTract_config  # (config/log/metadata)
+    # - catalogMatchTract_log  # (config/log/metadata)
+    # - catalogMatchTract_metadata  # (config/log/metadata)
+    # - compare_warp_artifact_mask  # (intermediate image/warp/catalog)
+    # - computeObjectEpochs_config  # (config/log/metadata)
+    # - computeObjectEpochs_log  # (config/log/metadata)
+    # - computeObjectEpochs_metadata  # (config/log/metadata)
+    # - consolidateObject_config  # (config/log/metadata)
+    # - consolidateObject_log  # (config/log/metadata)
+    # - consolidateObject_metadata  # (config/log/metadata)
+    # - consolidateParentTable_config  # (config/log/metadata)
+    # - consolidateParentTable_log  # (config/log/metadata)
+    # - consolidateParentTable_metadata  # (config/log/metadata)
+    # - consolidateShearObject_config  # (config/log/metadata)
+    # - consolidateShearObject_log  # (config/log/metadata)
+    # - consolidateShearObject_metadata  # (config/log/metadata)
+    # - deblendCoaddFootprints_config  # (config/log/metadata)
+    # - deblendCoaddFootprints_log  # (config/log/metadata)
+    # - deblendCoaddFootprints_metadata  # (config/log/metadata)
+    # - deconvolve_config  # (config/log/metadata)
+    # - deconvolve_log  # (config/log/metadata)
+    # - deconvolve_metadata  # (config/log/metadata)
+    # - deconvolved_deep_coadd  # (intermediate image/warp/catalog)
+    - deepCoadd_dcr_ddec_map_max
+    - deepCoadd_dcr_ddec_map_mean
+    - deepCoadd_dcr_ddec_map_min
+    - deepCoadd_dcr_ddec_map_sum
+    - deepCoadd_dcr_ddec_map_weighted_mean
+    - deepCoadd_dcr_dra_map_max
+    - deepCoadd_dcr_dra_map_mean
+    - deepCoadd_dcr_dra_map_min
+    - deepCoadd_dcr_dra_map_sum
+    - deepCoadd_dcr_dra_map_weighted_mean
+    - deepCoadd_dcr_e1_map_max
+    - deepCoadd_dcr_e1_map_mean
+    - deepCoadd_dcr_e1_map_min
+    - deepCoadd_dcr_e1_map_sum
+    - deepCoadd_dcr_e1_map_weighted_mean
+    - deepCoadd_dcr_e2_map_max
+    - deepCoadd_dcr_e2_map_mean
+    - deepCoadd_dcr_e2_map_min
+    - deepCoadd_dcr_e2_map_sum
+    - deepCoadd_dcr_e2_map_weighted_mean
+    # - deepCoadd_deblendedFlux  # (default non-transfer)
+    # - deepCoadd_deblendedModel  # (default non-transfer)
+    - deepCoadd_epoch_map_max
+    - deepCoadd_epoch_map_mean
+    - deepCoadd_epoch_map_min
+    - deepCoadd_epoch_map_sum
+    - deepCoadd_epoch_map_weighted_mean
+    - deepCoadd_exposure_time_map_max
+    - deepCoadd_exposure_time_map_mean
+    - deepCoadd_exposure_time_map_min
+    - deepCoadd_exposure_time_map_sum
+    - deepCoadd_exposure_time_map_weighted_mean
+    # - deepCoadd_forced_src_schema  # (intermediate catalog/metadata)
+    # - deepCoadd_measMatch  # (default non-transfer)
+    # - deepCoadd_measMatchFull  # (default non-transfer)
+    - deepCoadd_n_exposure_map_max
+    - deepCoadd_n_exposure_map_mean
+    - deepCoadd_n_exposure_map_min
+    - deepCoadd_n_exposure_map_sum
+    - deepCoadd_n_exposure_map_weighted_mean
+    - deepCoadd_psf_e1_map_max
+    - deepCoadd_psf_e1_map_mean
+    - deepCoadd_psf_e1_map_min
+    - deepCoadd_psf_e1_map_sum
+    - deepCoadd_psf_e1_map_weighted_mean
+    - deepCoadd_psf_e2_map_max
+    - deepCoadd_psf_e2_map_mean
+    - deepCoadd_psf_e2_map_min
+    - deepCoadd_psf_e2_map_sum
+    - deepCoadd_psf_e2_map_weighted_mean
+    - deepCoadd_psf_maglim_map_max
+    - deepCoadd_psf_maglim_map_mean
+    - deepCoadd_psf_maglim_map_min
+    - deepCoadd_psf_maglim_map_sum
+    - deepCoadd_psf_maglim_map_weighted_mean
+    - deepCoadd_psf_size_map_max
+    - deepCoadd_psf_size_map_mean
+    - deepCoadd_psf_size_map_min
+    - deepCoadd_psf_size_map_sum
+    - deepCoadd_psf_size_map_weighted_mean
+    - deepCoadd_sky_background_map_max
+    - deepCoadd_sky_background_map_mean
+    - deepCoadd_sky_background_map_min
+    - deepCoadd_sky_background_map_sum
+    - deepCoadd_sky_background_map_weighted_mean
+    - deepCoadd_sky_noise_map_max
+    - deepCoadd_sky_noise_map_mean
+    - deepCoadd_sky_noise_map_min
+    - deepCoadd_sky_noise_map_sum
+    - deepCoadd_sky_noise_map_weighted_mean
+    - deep_clippedMask_WholeTractImage
+    - deep_coadd
+    - deep_coaddImagePostageStamp_WholeTractImage
+    - deep_coaddImage_WholeTractImage
+    - deep_coadd_background
+    # - deep_coadd_bin  # (intermediate image/warp/catalog)
+    # - deep_coadd_cell_predetection  # (intermediate image/warp/catalog)
+    - deep_coadd_compare_template
+    # - deep_coadd_input_map  # (intermediate image/warp/catalog)
+    - deep_coadd_input_summary_tract
+    - deep_coadd_n_image
+    # - deep_coadd_n_image_bin  # (intermediate image/warp/catalog)
+    # - deep_coadd_predetection  # (intermediate image/warp/catalog)
+    # - deep_coadd_visit_selection  # (intermediate image/warp/catalog)
+    - deep_nImage_WholeTractImage
+    # - detectCoaddPeaks_config  # (config/log/metadata)
+    # - detectCoaddPeaks_log  # (config/log/metadata)
+    # - detectCoaddPeaks_metadata  # (config/log/metadata)
+    # - direct_warp  # (intermediate image/warp/catalog)
+    # - direct_warp_masked_fraction  # (intermediate image/warp/catalog)
+    # - direct_warp_noise0  # (default non-transfer)
+    # - fitDeblendedObjectsExp_config  # (config/log/metadata)
+    # - fitDeblendedObjectsExp_log  # (config/log/metadata)
+    # - fitDeblendedObjectsExp_metadata  # (config/log/metadata)
+    # - fitDeblendedObjectsSersic_config  # (config/log/metadata)
+    # - fitDeblendedObjectsSersic_log  # (config/log/metadata)
+    # - fitDeblendedObjectsSersic_metadata  # (config/log/metadata)
+    # - fitDeepCoaddPsfGaussians_config  # (config/log/metadata)
+    # - fitDeepCoaddPsfGaussians_log  # (config/log/metadata)
+    # - fitDeepCoaddPsfGaussians_metadata  # (config/log/metadata)
+    # - makeBinnedCoaddImage_config  # (config/log/metadata)
+    # - makeBinnedCoaddImage_log  # (config/log/metadata)
+    # - makeBinnedCoaddImage_metadata  # (config/log/metadata)
+    # - makeBinnedDeepNImage_config  # (config/log/metadata)
+    # - makeBinnedDeepNImage_log  # (config/log/metadata)
+    # - makeBinnedDeepNImage_metadata  # (config/log/metadata)
+    # - makeBinnedTemplateNImage_config  # (config/log/metadata)
+    # - makeBinnedTemplateNImage_log  # (config/log/metadata)
+    # - makeBinnedTemplateNImage_metadata  # (config/log/metadata)
+    # - makeDeepCoaddInputSummaryTract_config  # (config/log/metadata)
+    # - makeDeepCoaddInputSummaryTract_log  # (config/log/metadata)
+    # - makeDeepCoaddInputSummaryTract_metadata  # (config/log/metadata)
+    # - makeDirectWarp_config  # (config/log/metadata)
+    # - makeDirectWarp_log  # (config/log/metadata)
+    # - makeDirectWarp_metadata  # (config/log/metadata)
+    - makeDirectWarp_metrics
+    # - makeHealSparsePropertyMaps_config  # (config/log/metadata)
+    # - makeHealSparsePropertyMaps_log  # (config/log/metadata)
+    # - makeHealSparsePropertyMaps_metadata  # (config/log/metadata)
+    # - makePsfMatchedWarp_config  # (config/log/metadata)
+    # - makePsfMatchedWarp_log  # (config/log/metadata)
+    # - makePsfMatchedWarp_metadata  # (config/log/metadata)
+    # - makeTemplateCoaddInputSummaryTract_config  # (config/log/metadata)
+    # - makeTemplateCoaddInputSummaryTract_log  # (config/log/metadata)
+    # - makeTemplateCoaddInputSummaryTract_metadata  # (config/log/metadata)
+    # - makeWholeTractDeepNImage_config  # (config/log/metadata)
+    # - makeWholeTractDeepNImage_log  # (config/log/metadata)
+    # - makeWholeTractDeepNImage_metadata  # (config/log/metadata)
+    # - makeWholeTractImage_config  # (config/log/metadata)
+    # - makeWholeTractImage_log  # (config/log/metadata)
+    # - makeWholeTractImage_metadata  # (config/log/metadata)
+    # - makeWholeTractTemplateNImage_config  # (config/log/metadata)
+    # - makeWholeTractTemplateNImage_log  # (config/log/metadata)
+    # - makeWholeTractTemplateNImage_metadata  # (config/log/metadata)
+    # - measureObjectForced_config  # (config/log/metadata)
+    # - measureObjectForced_log  # (config/log/metadata)
+    # - measureObjectForced_metadata  # (config/log/metadata)
+    # - measureObjectUnforced_config  # (config/log/metadata)
+    # - measureObjectUnforced_log  # (config/log/metadata)
+    # - measureObjectUnforced_metadata  # (config/log/metadata)
+    # - mergeObjectDetection_config  # (config/log/metadata)
+    # - mergeObjectDetection_log  # (config/log/metadata)
+    # - mergeObjectDetection_metadata  # (config/log/metadata)
+    # - mergeObjectMeasurement_config  # (config/log/metadata)
+    # - mergeObjectMeasurement_log  # (config/log/metadata)
+    # - mergeObjectMeasurement_metadata  # (config/log/metadata)
+    # - metadetectionShear_config  # (config/log/metadata)
+    # - metadetectionShear_log  # (config/log/metadata)
+    # - metadetectionShear_metadata  # (config/log/metadata)
+    - object
+    - object_all
+    - object_cModelBulgeSizeVsCmodelBulgeMag_ScatterPlotWithTwoHists
+    - object_cModelDiskSizeVsCmodelDiskMag_ScatterPlotWithTwoHists
+    - object_coaddInputCount_SkyPlot
+    - object_column_validate_metrics
+    # - object_deblend  # (intermediate image/warp/catalog)
+    # - object_deblend_schema  # (intermediate catalog/metadata)
+    # - object_detection  # (intermediate image/warp/catalog)
+    # - object_detection_merged  # (intermediate image/warp/catalog)
+    # - object_detection_merged_schema  # (intermediate catalog/metadata)
+    # - object_detection_peak_schema  # (intermediate catalog/metadata)
+    # - object_detection_schema  # (intermediate catalog/metadata)
+    - object_e1Diff_ScatterPlotWithTwoHists
+    - object_e2Diff_ScatterPlotWithTwoHists
+    # - object_epoch  # (default non-transfer)
+    # - object_exp_multiprofit  # (intermediate image/warp/catalog)
+    - object_exponentialEllipticityVsExponentialMag_ScatterPlotWithTwoHists
+    - object_exponentialSizeVsExponentialMag_ScatterPlotWithTwoHists
+    - object_exponentialSizeVsSersicMag_ScatterPlotWithTwoHists
+    # - object_forced_measurement  # (intermediate image/warp/catalog)
+    - object_metrics
+    # - object_nonprimary  # (default non-transfer)
+    # - object_parent  # (default non-transfer)
+    - object_parent_metrics
+    # - object_parent_patch  # (intermediate catalog/metadata)
+    # - object_patch  # (intermediate catalog/metadata)
+    - object_psfCModelScatter_ScatterPlotWithTwoHists
+    # - object_psf_multiprofit  # (intermediate image/warp/catalog)
+    # - object_ref_match_astrom  # (default non-transfer)
+    - object_ref_match_astrom_astromDiffDecScatterPlot_ScatterPlotWithTwoHists
+    - object_ref_match_astrom_astromDiffDecSkyPlot_SkyPlot
+    - object_ref_match_astrom_astromDiffRAScatterPlot_ScatterPlotWithTwoHists
+    - object_ref_match_astrom_astromDiffRASkyPlot_SkyPlot
+    - object_ref_match_astrom_metrics
+    # - object_ref_match_photom  # (default non-transfer)
+    - object_ref_match_photom_metrics
+    - object_ref_match_photom_targetRefCatDeltaCModelScatterPlot_ScatterPlotWithTwoHists
+    - object_ref_match_photom_targetRefCatDeltaCModelSkyPlot_SkyPlot
+    - object_ref_match_photom_targetRefCatDeltaPsfScatterPlot_ScatterPlotWithTwoHists
+    - object_ref_match_photom_targetRefCatDeltaPsfSkyPlot_SkyPlot
+    # - object_ref_measurement  # (intermediate image/warp/catalog)
+    # - object_ref_measurement_schema  # (intermediate catalog/metadata)
+    # - object_scarlet_models  # (intermediate catalog/metadata)
+    - object_sersicEllipticityVsSersicMag_ScatterPlotWithTwoHists
+    - object_sersicIndexVsSersicMag_ScatterPlotWithTwoHists
+    - object_sersicSizeVsSersicMag_ScatterPlotWithTwoHists
+    # - object_sersic_multiprofit  # (intermediate image/warp/catalog)
+    - object_shapeSizeDetRadiusVsCmodelMag_ScatterPlotWithTwoHists
+    - object_shapeSizeDetRadiusVsPsfMag_ScatterPlotWithTwoHists
+    - object_shapeSizeFractionalDiff_ScatterPlotWithTwoHists
+    # - object_shear_all  # (default non-transfer)
+    # - object_shear_patch  # (intermediate catalog/metadata)
+    # - object_shear_schema  # (intermediate catalog/metadata)
+    - object_skyObjectFlux_HistPlot
+    - object_skyObjectSky_SkyPlot
+    # - object_unforced_measurement  # (intermediate image/warp/catalog)
+    # - object_unforced_measurement_schema  # (intermediate catalog/metadata)
+    # - object_unstandardized  # (intermediate catalog/metadata)
+    - object_wPerpCModel_ColorColorFitPlot
+    - object_wPerpPSF_ColorColorFitPlot
+    - object_xPerpCModel_ColorColorFitPlot
+    - object_xPerpPSF_ColorColorFitPlot
+    - object_yPerpCModel_ColorColorFitPlot
+    - object_yPerpPSF_ColorColorFitPlot
+    # - photometricCatalogMatch_config  # (config/log/metadata)
+    # - photometricCatalogMatch_log  # (config/log/metadata)
+    # - photometricCatalogMatch_metadata  # (config/log/metadata)
+    # - photometricRefCatObjectTract_config  # (config/log/metadata)
+    # - photometricRefCatObjectTract_log  # (config/log/metadata)
+    # - photometricRefCatObjectTract_metadata  # (config/log/metadata)
+    # - plotPropertyMapTract_config  # (config/log/metadata)
+    # - plotPropertyMapTract_log  # (config/log/metadata)
+    # - plotPropertyMapTract_metadata  # (config/log/metadata)
+    - propertyMapTract_deepCoadd_dcr_ddec_map_weighted_mean_PerTractPropertyMapPlot
+    - propertyMapTract_deepCoadd_dcr_dra_map_weighted_mean_PerTractPropertyMapPlot
+    - propertyMapTract_deepCoadd_dcr_e1_map_weighted_mean_PerTractPropertyMapPlot
+    - propertyMapTract_deepCoadd_dcr_e2_map_weighted_mean_PerTractPropertyMapPlot
+    - propertyMapTract_deepCoadd_epoch_map_max_PerTractPropertyMapPlot
+    - propertyMapTract_deepCoadd_epoch_map_mean_PerTractPropertyMapPlot
+    - propertyMapTract_deepCoadd_epoch_map_min_PerTractPropertyMapPlot
+    - propertyMapTract_deepCoadd_exposure_time_map_sum_PerTractPropertyMapPlot
+    - propertyMapTract_deepCoadd_psf_e1_map_weighted_mean_PerTractPropertyMapPlot
+    - propertyMapTract_deepCoadd_psf_e2_map_weighted_mean_PerTractPropertyMapPlot
+    - propertyMapTract_deepCoadd_psf_maglim_map_weighted_mean_PerTractPropertyMapPlot
+    - propertyMapTract_deepCoadd_psf_size_map_weighted_mean_PerTractPropertyMapPlot
+    - propertyMapTract_deepCoadd_sky_background_map_weighted_mean_PerTractPropertyMapPlot
+    - propertyMapTract_deepCoadd_sky_noise_map_weighted_mean_PerTractPropertyMapPlot
+    # - psf_matched_warp  # (intermediate image/warp/catalog)
+    # - refCatObjectTract_config  # (config/log/metadata)
+    # - refCatObjectTract_log  # (config/log/metadata)
+    # - refCatObjectTract_metadata  # (config/log/metadata)
+    # - rewriteObject_config  # (config/log/metadata)
+    # - rewriteObject_log  # (config/log/metadata)
+    # - rewriteObject_metadata  # (config/log/metadata)
+    # - selectDeepCoaddVisits_config  # (config/log/metadata)
+    # - selectDeepCoaddVisits_log  # (config/log/metadata)
+    # - selectDeepCoaddVisits_metadata  # (config/log/metadata)
+    # - selectTemplateCoaddVisits_config  # (config/log/metadata)
+    # - selectTemplateCoaddVisits_log  # (config/log/metadata)
+    # - selectTemplateCoaddVisits_metadata  # (config/log/metadata)
+    # - splitPrimaryObject_config  # (config/log/metadata)
+    # - splitPrimaryObject_log  # (config/log/metadata)
+    # - splitPrimaryObject_metadata  # (config/log/metadata)
+    # - standardizeObject_config  # (config/log/metadata)
+    # - standardizeObject_log  # (config/log/metadata)
+    # - standardizeObject_metadata  # (config/log/metadata)
+    # - target_ref_match_astrom  # (default non-transfer)
+    # - target_ref_match_photom  # (default non-transfer)
+    - template_coadd
+    # - template_coadd_compare_template  # (default non-transfer)
+    # - template_coadd_input_map  # (intermediate image/warp/catalog)
+    - template_coadd_input_summary_tract
+    - template_coadd_n_image
+    # - template_coadd_n_image_bin  # (intermediate image/warp/catalog)
+    # - template_coadd_visit_selection  # (intermediate image/warp/catalog)
+    - template_nImage_WholeTractImage
+    # - validateObjectTableCore_config  # (config/log/metadata)
+    # - validateObjectTableCore_log  # (config/log/metadata)
+    # - validateObjectTableCore_metadata  # (config/log/metadata)
+  step3b:
+    # - analyzeObjectTableSurveyCore_config  # (config/log/metadata)
+    # - analyzeObjectTableSurveyCore_log  # (config/log/metadata)
+    # - analyzeObjectTableSurveyCore_metadata  # (config/log/metadata)
+    # - consolidateHealSparsePropertyMaps_config  # (config/log/metadata)
+    # - consolidateHealSparsePropertyMaps_log  # (config/log/metadata)
+    # - consolidateHealSparsePropertyMaps_metadata  # (config/log/metadata)
+    - consolidateHealSparsePropertyMaps_metrics
+    - deepCoadd_dcr_ddec_consolidated_map_max
+    - deepCoadd_dcr_ddec_consolidated_map_mean
+    - deepCoadd_dcr_ddec_consolidated_map_min
+    - deepCoadd_dcr_ddec_consolidated_map_sum
+    - deepCoadd_dcr_ddec_consolidated_map_weighted_mean
+    - deepCoadd_dcr_dra_consolidated_map_max
+    - deepCoadd_dcr_dra_consolidated_map_mean
+    - deepCoadd_dcr_dra_consolidated_map_min
+    - deepCoadd_dcr_dra_consolidated_map_sum
+    - deepCoadd_dcr_dra_consolidated_map_weighted_mean
+    - deepCoadd_dcr_e1_consolidated_map_max
+    - deepCoadd_dcr_e1_consolidated_map_mean
+    - deepCoadd_dcr_e1_consolidated_map_min
+    - deepCoadd_dcr_e1_consolidated_map_sum
+    - deepCoadd_dcr_e1_consolidated_map_weighted_mean
+    - deepCoadd_dcr_e2_consolidated_map_max
+    - deepCoadd_dcr_e2_consolidated_map_mean
+    - deepCoadd_dcr_e2_consolidated_map_min
+    - deepCoadd_dcr_e2_consolidated_map_sum
+    - deepCoadd_dcr_e2_consolidated_map_weighted_mean
+    - deepCoadd_epoch_consolidated_map_max
+    - deepCoadd_epoch_consolidated_map_mean
+    - deepCoadd_epoch_consolidated_map_min
+    - deepCoadd_epoch_consolidated_map_sum
+    - deepCoadd_epoch_consolidated_map_weighted_mean
+    - deepCoadd_exposure_time_consolidated_map_max
+    - deepCoadd_exposure_time_consolidated_map_mean
+    - deepCoadd_exposure_time_consolidated_map_min
+    - deepCoadd_exposure_time_consolidated_map_sum
+    - deepCoadd_exposure_time_consolidated_map_weighted_mean
+    - deepCoadd_n_exposure_consolidated_map_max
+    - deepCoadd_n_exposure_consolidated_map_mean
+    - deepCoadd_n_exposure_consolidated_map_min
+    - deepCoadd_n_exposure_consolidated_map_sum
+    - deepCoadd_n_exposure_consolidated_map_weighted_mean
+    - deepCoadd_psf_e1_consolidated_map_max
+    - deepCoadd_psf_e1_consolidated_map_mean
+    - deepCoadd_psf_e1_consolidated_map_min
+    - deepCoadd_psf_e1_consolidated_map_sum
+    - deepCoadd_psf_e1_consolidated_map_weighted_mean
+    - deepCoadd_psf_e2_consolidated_map_max
+    - deepCoadd_psf_e2_consolidated_map_mean
+    - deepCoadd_psf_e2_consolidated_map_min
+    - deepCoadd_psf_e2_consolidated_map_sum
+    - deepCoadd_psf_e2_consolidated_map_weighted_mean
+    - deepCoadd_psf_maglim_consolidated_map_max
+    - deepCoadd_psf_maglim_consolidated_map_mean
+    - deepCoadd_psf_maglim_consolidated_map_min
+    - deepCoadd_psf_maglim_consolidated_map_sum
+    - deepCoadd_psf_maglim_consolidated_map_weighted_mean
+    - deepCoadd_psf_size_consolidated_map_max
+    - deepCoadd_psf_size_consolidated_map_mean
+    - deepCoadd_psf_size_consolidated_map_min
+    - deepCoadd_psf_size_consolidated_map_sum
+    - deepCoadd_psf_size_consolidated_map_weighted_mean
+    - deepCoadd_sky_background_consolidated_map_max
+    - deepCoadd_sky_background_consolidated_map_mean
+    - deepCoadd_sky_background_consolidated_map_min
+    - deepCoadd_sky_background_consolidated_map_sum
+    - deepCoadd_sky_background_consolidated_map_weighted_mean
+    - deepCoadd_sky_noise_consolidated_map_max
+    - deepCoadd_sky_noise_consolidated_map_mean
+    - deepCoadd_sky_noise_consolidated_map_min
+    - deepCoadd_sky_noise_consolidated_map_sum
+    - deepCoadd_sky_noise_consolidated_map_weighted_mean
+    - deep_coadd_input_summary
+    # - makeDeepCoaddInputSummary_config  # (config/log/metadata)
+    # - makeDeepCoaddInputSummary_log  # (config/log/metadata)
+    # - makeDeepCoaddInputSummary_metadata  # (config/log/metadata)
+    # - makeMetricTableObjectParentTableCore_config  # (config/log/metadata)
+    # - makeMetricTableObjectParentTableCore_log  # (config/log/metadata)
+    # - makeMetricTableObjectParentTableCore_metadata  # (config/log/metadata)
+    # - makeMetricTableObjectTableCoreRefCatMatch_config  # (config/log/metadata)
+    # - makeMetricTableObjectTableCoreRefCatMatch_log  # (config/log/metadata)
+    # - makeMetricTableObjectTableCoreRefCatMatch_metadata  # (config/log/metadata)
+    # - makeMetricTableObjectTableCore_config  # (config/log/metadata)
+    # - makeMetricTableObjectTableCore_log  # (config/log/metadata)
+    # - makeMetricTableObjectTableCore_metadata  # (config/log/metadata)
+    # - makeTemplateCoaddInputSummary_config  # (config/log/metadata)
+    # - makeTemplateCoaddInputSummary_log  # (config/log/metadata)
+    # - makeTemplateCoaddInputSummary_metadata  # (config/log/metadata)
+    # - objectParentTableCoreWholeSkyPlot_config  # (config/log/metadata)
+    # - objectParentTableCoreWholeSkyPlot_log  # (config/log/metadata)
+    # - objectParentTableCoreWholeSkyPlot_metadata  # (config/log/metadata)
+    # - objectTableCoreRefCatMatchWholeSkyPlot_config  # (config/log/metadata)
+    # - objectTableCoreRefCatMatchWholeSkyPlot_log  # (config/log/metadata)
+    # - objectTableCoreRefCatMatchWholeSkyPlot_metadata  # (config/log/metadata)
+    # - objectTableCoreWholeSkyPlot_config  # (config/log/metadata)
+    # - objectTableCoreWholeSkyPlot_log  # (config/log/metadata)
+    # - objectTableCoreWholeSkyPlot_metadata  # (config/log/metadata)
+    - object_metrics_table
+    - object_parent_metrics_table
+    - object_ref_match_astrom_metrics_table
+    # - plotPropertyMapSurvey_config  # (config/log/metadata)
+    # - plotPropertyMapSurvey_log  # (config/log/metadata)
+    # - plotPropertyMapSurvey_metadata  # (config/log/metadata)
+    - template_coadd_input_summary
+  step3c:
+    # - deep_coadd_g_gray  # (default non-transfer)
+    # - deep_coadd_g_mask  # (default non-transfer)
+    # - deep_coadd_i_gray  # (default non-transfer)
+    # - deep_coadd_i_mask  # (default non-transfer)
+    # - deep_coadd_r_gray  # (default non-transfer)
+    # - deep_coadd_r_mask  # (default non-transfer)
+    # - deep_coadd_u_gray  # (default non-transfer)
+    # - deep_coadd_u_mask  # (default non-transfer)
+    # - deep_coadd_y_gray  # (default non-transfer)
+    # - deep_coadd_y_mask  # (default non-transfer)
+    # - deep_coadd_z_gray  # (default non-transfer)
+    # - deep_coadd_z_mask  # (default non-transfer)
+    # - makeSingleBandRGBCoaddG_config  # (config/log/metadata)
+    # - makeSingleBandRGBCoaddG_log  # (config/log/metadata)
+    # - makeSingleBandRGBCoaddG_metadata  # (config/log/metadata)
+    # - makeSingleBandRGBCoaddI_config  # (config/log/metadata)
+    # - makeSingleBandRGBCoaddI_log  # (config/log/metadata)
+    # - makeSingleBandRGBCoaddI_metadata  # (config/log/metadata)
+    # - makeSingleBandRGBCoaddR_config  # (config/log/metadata)
+    # - makeSingleBandRGBCoaddR_log  # (config/log/metadata)
+    # - makeSingleBandRGBCoaddR_metadata  # (config/log/metadata)
+    # - makeSingleBandRGBCoaddU_config  # (config/log/metadata)
+    # - makeSingleBandRGBCoaddU_log  # (config/log/metadata)
+    # - makeSingleBandRGBCoaddU_metadata  # (config/log/metadata)
+    # - makeSingleBandRGBCoaddY_config  # (config/log/metadata)
+    # - makeSingleBandRGBCoaddY_log  # (config/log/metadata)
+    # - makeSingleBandRGBCoaddY_metadata  # (config/log/metadata)
+    # - makeSingleBandRGBCoaddZ_config  # (config/log/metadata)
+    # - makeSingleBandRGBCoaddZ_log  # (config/log/metadata)
+    # - makeSingleBandRGBCoaddZ_metadata  # (config/log/metadata)
+  step3d:
+    - deep_coadd_g_hips8
+    - deep_coadd_i_hips8
+    - deep_coadd_r_hips8
+    - deep_coadd_u_hips8
+    - deep_coadd_y_hips8
+    - deep_coadd_z_hips8
+    # - makeHighOrderHipsG_config  # (config/log/metadata)
+    # - makeHighOrderHipsG_log  # (config/log/metadata)
+    # - makeHighOrderHipsG_metadata  # (config/log/metadata)
+    # - makeHighOrderHipsI_config  # (config/log/metadata)
+    # - makeHighOrderHipsI_log  # (config/log/metadata)
+    # - makeHighOrderHipsI_metadata  # (config/log/metadata)
+    # - makeHighOrderHipsR_config  # (config/log/metadata)
+    # - makeHighOrderHipsR_log  # (config/log/metadata)
+    # - makeHighOrderHipsR_metadata  # (config/log/metadata)
+    # - makeHighOrderHipsU_config  # (config/log/metadata)
+    # - makeHighOrderHipsU_log  # (config/log/metadata)
+    # - makeHighOrderHipsU_metadata  # (config/log/metadata)
+    # - makeHighOrderHipsY_config  # (config/log/metadata)
+    # - makeHighOrderHipsY_log  # (config/log/metadata)
+    # - makeHighOrderHipsY_metadata  # (config/log/metadata)
+    # - makeHighOrderHipsZ_config  # (config/log/metadata)
+    # - makeHighOrderHipsZ_log  # (config/log/metadata)
+    # - makeHighOrderHipsZ_metadata  # (config/log/metadata)
+    # - makeLowOrderHipsG_config  # (config/log/metadata)
+    # - makeLowOrderHipsG_log  # (config/log/metadata)
+    # - makeLowOrderHipsG_metadata  # (config/log/metadata)
+    # - makeLowOrderHipsI_config  # (config/log/metadata)
+    # - makeLowOrderHipsI_log  # (config/log/metadata)
+    # - makeLowOrderHipsI_metadata  # (config/log/metadata)
+    # - makeLowOrderHipsR_config  # (config/log/metadata)
+    # - makeLowOrderHipsR_log  # (config/log/metadata)
+    # - makeLowOrderHipsR_metadata  # (config/log/metadata)
+    # - makeLowOrderHipsU_config  # (config/log/metadata)
+    # - makeLowOrderHipsU_log  # (config/log/metadata)
+    # - makeLowOrderHipsU_metadata  # (config/log/metadata)
+    # - makeLowOrderHipsY_config  # (config/log/metadata)
+    # - makeLowOrderHipsY_log  # (config/log/metadata)
+    # - makeLowOrderHipsY_metadata  # (config/log/metadata)
+    # - makeLowOrderHipsZ_config  # (config/log/metadata)
+    # - makeLowOrderHipsZ_log  # (config/log/metadata)
+    # - makeLowOrderHipsZ_metadata  # (config/log/metadata)
+    # - writeAllSkyHipsInfoG_config  # (config/log/metadata)
+    # - writeAllSkyHipsInfoG_log  # (config/log/metadata)
+    # - writeAllSkyHipsInfoG_metadata  # (config/log/metadata)
+    # - writeAllSkyHipsInfoI_config  # (config/log/metadata)
+    # - writeAllSkyHipsInfoI_log  # (config/log/metadata)
+    # - writeAllSkyHipsInfoI_metadata  # (config/log/metadata)
+    # - writeAllSkyHipsInfoR_config  # (config/log/metadata)
+    # - writeAllSkyHipsInfoR_log  # (config/log/metadata)
+    # - writeAllSkyHipsInfoR_metadata  # (config/log/metadata)
+    # - writeAllSkyHipsInfoU_config  # (config/log/metadata)
+    # - writeAllSkyHipsInfoU_log  # (config/log/metadata)
+    # - writeAllSkyHipsInfoU_metadata  # (config/log/metadata)
+    # - writeAllSkyHipsInfoY_config  # (config/log/metadata)
+    # - writeAllSkyHipsInfoY_log  # (config/log/metadata)
+    # - writeAllSkyHipsInfoY_metadata  # (config/log/metadata)
+    # - writeAllSkyHipsInfoZ_config  # (config/log/metadata)
+    # - writeAllSkyHipsInfoZ_log  # (config/log/metadata)
+    # - writeAllSkyHipsInfoZ_metadata  # (config/log/metadata)
+stage4:
+  step4a:
+    # - analyzeRecalibratedStarObjectMatch_config  # (config/log/metadata)
+    # - analyzeRecalibratedStarObjectMatch_log  # (config/log/metadata)
+    # - analyzeRecalibratedStarObjectMatch_metadata  # (config/log/metadata)
+    # - analyzeSourceAstrometricRefMatch_config  # (config/log/metadata)
+    # - analyzeSourceAstrometricRefMatch_log  # (config/log/metadata)
+    # - analyzeSourceAstrometricRefMatch_metadata  # (config/log/metadata)
+    # - analyzeSourcePhotometricRefMatch_config  # (config/log/metadata)
+    # - analyzeSourcePhotometricRefMatch_log  # (config/log/metadata)
+    # - analyzeSourcePhotometricRefMatch_metadata  # (config/log/metadata)
+    # - analyzeSource_config  # (config/log/metadata)
+    # - analyzeSource_log  # (config/log/metadata)
+    # - analyzeSource_metadata  # (config/log/metadata)
+    # - buildTemplate_config  # (config/log/metadata)
+    # - buildTemplate_log  # (config/log/metadata)
+    # - buildTemplate_metadata  # (config/log/metadata)
+    # - computeReliability_config  # (config/log/metadata)
+    # - computeReliability_log  # (config/log/metadata)
+    # - computeReliability_metadata  # (config/log/metadata)
+    # - consolidateSource_config  # (config/log/metadata)
+    # - consolidateSource_log  # (config/log/metadata)
+    # - consolidateSource_metadata  # (config/log/metadata)
+    # - consolidateVisitDiaSource_config  # (config/log/metadata)
+    # - consolidateVisitDiaSource_log  # (config/log/metadata)
+    # - consolidateVisitDiaSource_metadata  # (config/log/metadata)
+    # - detectAndMeasureDiaSource_config  # (config/log/metadata)
+    # - detectAndMeasureDiaSource_log  # (config/log/metadata)
+    # - detectAndMeasureDiaSource_metadata  # (config/log/metadata)
+    # - dia_source_detector  # (intermediate catalog/metadata)
+    # - dia_source_high_reliability  # (intermediate image/warp/catalog)
+    # - dia_source_low_reliability  # (intermediate image/warp/catalog)
+    # - dia_source_reliability  # (intermediate image/warp/catalog)
+    # - dia_source_schema  # (intermediate catalog/metadata)
+    # - dia_source_unfiltered  # (intermediate image/warp/catalog)
+    # - dia_source_unstandardized  # (intermediate catalog/metadata)
+    # - dia_source_visit  # (default non-transfer)
+    # - difference_background  # (default non-transfer)
+    # - difference_image  # (intermediate image/warp/catalog)
+    # - difference_image_predetection  # (intermediate image/warp/catalog)
+    # - difference_kernel  # (intermediate image/warp/catalog)
+    # - difference_kernel_sources  # (intermediate image/warp/catalog)
+    # - difference_streaks  # (intermediate image/warp/catalog)
+    # - filterDiaSourcePostReliability_config  # (config/log/metadata)
+    # - filterDiaSourcePostReliability_log  # (config/log/metadata)
+    # - filterDiaSourcePostReliability_metadata  # (config/log/metadata)
+    # - filterDiaSource_config  # (config/log/metadata)
+    # - filterDiaSource_log  # (config/log/metadata)
+    # - filterDiaSource_metadata  # (config/log/metadata)
+    # - long_trailed_dia_source  # (intermediate image/warp/catalog)
+    # - makeAnalysisSourceAstrometricRefMatch_config  # (config/log/metadata)
+    # - makeAnalysisSourceAstrometricRefMatch_log  # (config/log/metadata)
+    # - makeAnalysisSourceAstrometricRefMatch_metadata  # (config/log/metadata)
+    # - makeAnalysisSourcePhotometricRefMatch_config  # (config/log/metadata)
+    # - makeAnalysisSourcePhotometricRefMatch_log  # (config/log/metadata)
+    # - makeAnalysisSourcePhotometricRefMatch_metadata  # (config/log/metadata)
+    # - preliminary_visit_image_background_skyCorr_visit_mosaic  # (default non-transfer)
+    # - preliminary_visit_image_skyCorr_visit_mosaic  # (default non-transfer)
+    # - rejected_dia_source  # (intermediate image/warp/catalog)
+    # - reprocessVisitImage_config  # (config/log/metadata)
+    # - reprocessVisitImage_log  # (config/log/metadata)
+    # - reprocessVisitImage_metadata  # (config/log/metadata)
+    - reprocessVisitImage_metrics
+    # - skyCorr  # (default non-transfer)
+    # - skyCorr_config  # (config/log/metadata)
+    # - skyCorr_log  # (config/log/metadata)
+    # - skyCorr_metadata  # (config/log/metadata)
+    - source
+    - source_all
+    # - source_detector  # (intermediate catalog/metadata)
+    # - source_footprints  # (intermediate catalog/metadata)
+    # - source_nonprimary  # (default non-transfer)
+    # - source_unstandardized  # (intermediate catalog/metadata)
+    # - sources_schema  # (intermediate catalog/metadata)
+    # - splitPrimarySource_config  # (config/log/metadata)
+    # - splitPrimarySource_log  # (config/log/metadata)
+    # - splitPrimarySource_metadata  # (config/log/metadata)
+    # - standardizeDiaSource_config  # (config/log/metadata)
+    # - standardizeDiaSource_log  # (config/log/metadata)
+    # - standardizeDiaSource_metadata  # (config/log/metadata)
+    # - standardizeSource_config  # (config/log/metadata)
+    # - standardizeSource_log  # (config/log/metadata)
+    # - standardizeSource_metadata  # (config/log/metadata)
+    # - subtractImages_config  # (config/log/metadata)
+    # - subtractImages_log  # (config/log/metadata)
+    # - subtractImages_metadata  # (config/log/metadata)
+    # - target_ref_match_astrom  # (default non-transfer)
+    # - target_ref_match_photom  # (default non-transfer)
+    # - template_detector  # (intermediate catalog/metadata)
+    # - template_matched  # (intermediate image/warp/catalog)
+    # - trailed_glints  # (default non-transfer)
+    # - visit_image  # (default non-transfer)
+    # - visit_image_background  # (default non-transfer)
+  step4b:
+    # - generateEphemerides_config  # (config/log/metadata)
+    # - generateEphemerides_log  # (config/log/metadata)
+    # - generateEphemerides_metadata  # (config/log/metadata)
+    # - preloaded_ss_object_visit  # (default non-transfer)
+  step4c:
+    # - analyzeDiaSourceTableTract_config  # (config/log/metadata)
+    # - analyzeDiaSourceTableTract_log  # (config/log/metadata)
+    # - analyzeDiaSourceTableTract_metadata  # (config/log/metadata)
+    # - analyzeSourceAssociation_config  # (config/log/metadata)
+    # - analyzeSourceAssociation_log  # (config/log/metadata)
+    # - analyzeSourceAssociation_metadata  # (config/log/metadata)
+    # - assemblePrettyCoadd_config  # (config/log/metadata)
+    # - assemblePrettyCoadd_log  # (config/log/metadata)
+    # - assemblePrettyCoadd_metadata  # (config/log/metadata)
+    # - associateAnalysisSource_config  # (config/log/metadata)
+    # - associateAnalysisSource_log  # (config/log/metadata)
+    # - associateAnalysisSource_metadata  # (config/log/metadata)
+    # - associateDiaSource_config  # (config/log/metadata)
+    # - associateDiaSource_log  # (config/log/metadata)
+    # - associateDiaSource_metadata  # (config/log/metadata)
+    - associateDiaSource_metrics
+    # - calculateDiaObject_config  # (config/log/metadata)
+    # - calculateDiaObject_log  # (config/log/metadata)
+    # - calculateDiaObject_metadata  # (config/log/metadata)
+    # - compare_warp_artifact_mask  # (intermediate image/warp/catalog)
+    # - consolidateDiaObject_config  # (config/log/metadata)
+    # - consolidateDiaObject_log  # (config/log/metadata)
+    # - consolidateDiaObject_metadata  # (config/log/metadata)
+    # - consolidateDiaSource_config  # (config/log/metadata)
+    # - consolidateDiaSource_log  # (config/log/metadata)
+    # - consolidateDiaSource_metadata  # (config/log/metadata)
+    - dia_object
+    - dia_object_forced_source
+    # - dia_object_forced_source_unstandardized  # (intermediate catalog/metadata)
+    # - dia_object_patch  # (intermediate catalog/metadata)
+    # - dia_object_pre_calc  # (intermediate image/warp/catalog)
+    - dia_source
+    # - dia_source_patch  # (intermediate catalog/metadata)
+    # - forcedPhotDiaObjectDetector_config  # (config/log/metadata)
+    # - forcedPhotDiaObjectDetector_log  # (config/log/metadata)
+    # - forcedPhotDiaObjectDetector_metadata  # (config/log/metadata)
+    # - forcedPhotObjectDetector_config  # (config/log/metadata)
+    # - forcedPhotObjectDetector_log  # (config/log/metadata)
+    # - forcedPhotObjectDetector_metadata  # (config/log/metadata)
+    # - isolated_analysis_source  # (default non-transfer)
+    # - isolated_analysis_source_association  # (default non-transfer)
+    # - makeBinnedPrettyCoaddImage_config  # (config/log/metadata)
+    # - makeBinnedPrettyCoaddImage_log  # (config/log/metadata)
+    # - makeBinnedPrettyCoaddImage_metadata  # (config/log/metadata)
+    # - makePrettyDirectWarp_config  # (config/log/metadata)
+    # - makePrettyDirectWarp_log  # (config/log/metadata)
+    # - makePrettyDirectWarp_metadata  # (config/log/metadata)
+    # - makePrettyPsfMatchedWarp_config  # (config/log/metadata)
+    # - makePrettyPsfMatchedWarp_log  # (config/log/metadata)
+    # - makePrettyPsfMatchedWarp_metadata  # (config/log/metadata)
+    # - makeWholeTractPrettyCoaddImage_config  # (config/log/metadata)
+    # - makeWholeTractPrettyCoaddImage_log  # (config/log/metadata)
+    # - makeWholeTractPrettyCoaddImage_metadata  # (config/log/metadata)
+    - object_forced_source
+    # - object_forced_source_all  # (intermediate image/warp/catalog)
+    # - object_forced_source_nonprimary  # (default non-transfer)
+    # - object_forced_source_unstandardized  # (intermediate catalog/metadata)
+    - pretty_coadd
+    # - pretty_coadd_bin  # (default non-transfer)
+    # - pretty_coadd_compare_template  # (intermediate image/warp/catalog)
+    # - pretty_coadd_input_map  # (intermediate image/warp/catalog)
+    - pretty_coadd_n_image
+    # - pretty_direct_warp  # (intermediate image/warp/catalog)
+    # - pretty_direct_warp_masked_fraction  # (intermediate image/warp/catalog)
+    # - pretty_psf_matched_warp  # (intermediate image/warp/catalog)
+    # - splitPrimaryObjectForcedSource_config  # (config/log/metadata)
+    # - splitPrimaryObjectForcedSource_log  # (config/log/metadata)
+    # - splitPrimaryObjectForcedSource_metadata  # (config/log/metadata)
+    # - ss_object_unassociated  # (intermediate image/warp/catalog)
+    # - ss_source_associated  # (intermediate image/warp/catalog)
+    # - standardizeDiaObjectForcedSource_config  # (config/log/metadata)
+    # - standardizeDiaObjectForcedSource_log  # (config/log/metadata)
+    # - standardizeDiaObjectForcedSource_metadata  # (config/log/metadata)
+    # - standardizeObjectForcedSource_config  # (config/log/metadata)
+    # - standardizeObjectForcedSource_log  # (config/log/metadata)
+    # - standardizeObjectForcedSource_metadata  # (config/log/metadata)
+  step4d:
+    - analysis_source_association_metrics_table
+    # - consolidateSsTables_config  # (config/log/metadata)
+    # - consolidateSsTables_log  # (config/log/metadata)
+    # - consolidateSsTables_metadata  # (config/log/metadata)
+    # - makeAnalysisSourceAssociationMetricTable_config  # (config/log/metadata)
+    # - makeAnalysisSourceAssociationMetricTable_log  # (config/log/metadata)
+    # - makeAnalysisSourceAssociationMetricTable_metadata  # (config/log/metadata)
+    - makeAnalysisSourceAssociationMetricTable_metrics
+    # - makeAnalysisSourceAssociationWholeSkyPlot_config  # (config/log/metadata)
+    # - makeAnalysisSourceAssociationWholeSkyPlot_log  # (config/log/metadata)
+    # - makeAnalysisSourceAssociationWholeSkyPlot_metadata  # (config/log/metadata)
+    - ss_object
+    - ss_source
+  step4e:
+    # - fixBackgroundPrettyCoadd_config  # (config/log/metadata)
+    # - fixBackgroundPrettyCoadd_log  # (config/log/metadata)
+    # - fixBackgroundPrettyCoadd_metadata  # (config/log/metadata)
+    # - fixStarsPrettyCoadd_config  # (config/log/metadata)
+    # - fixStarsPrettyCoadd_log  # (config/log/metadata)
+    # - fixStarsPrettyCoadd_metadata  # (config/log/metadata)
+    # - makeRGBPicturePrettyCoaddGRI_config  # (config/log/metadata)
+    # - makeRGBPicturePrettyCoaddGRI_log  # (config/log/metadata)
+    # - makeRGBPicturePrettyCoaddGRI_metadata  # (config/log/metadata)
+    # - pretty_coadd_extra_bg_subtracted  # (default non-transfer)
+    # - pretty_coadd_fixed_stars  # (default non-transfer)
+    # - pretty_coadd_gri  # (default non-transfer)
+    # - pretty_coadd_gri_mask  # (default non-transfer)
+  step4f:
+    # - makeHighOrderHipsEpoGRI_config  # (config/log/metadata)
+    # - makeHighOrderHipsEpoGRI_log  # (config/log/metadata)
+    # - makeHighOrderHipsEpoGRI_metadata  # (config/log/metadata)
+    # - makeHighOrderHipsGRI_config  # (config/log/metadata)
+    # - makeHighOrderHipsGRI_log  # (config/log/metadata)
+    # - makeHighOrderHipsGRI_metadata  # (config/log/metadata)
+    # - makeLowOrderHipsEpoGRI_config  # (config/log/metadata)
+    # - makeLowOrderHipsEpoGRI_log  # (config/log/metadata)
+    # - makeLowOrderHipsEpoGRI_metadata  # (config/log/metadata)
+    # - makeLowOrderHipsGRI_config  # (config/log/metadata)
+    # - makeLowOrderHipsGRI_log  # (config/log/metadata)
+    # - makeLowOrderHipsGRI_metadata  # (config/log/metadata)
+    - pretty_coadd_gri_png_hips8
+    - pretty_coadd_gri_webp_hips8
+    # - writeAllSkyHipsInfoEpoGRI_config  # (config/log/metadata)
+    # - writeAllSkyHipsInfoEpoGRI_log  # (config/log/metadata)
+    # - writeAllSkyHipsInfoEpoGRI_metadata  # (config/log/metadata)
+    # - writeAllSkyHipsInfoGRI_config  # (config/log/metadata)
+    # - writeAllSkyHipsInfoGRI_log  # (config/log/metadata)
+    # - writeAllSkyHipsInfoGRI_metadata  # (config/log/metadata)
